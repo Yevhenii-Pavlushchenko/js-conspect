@@ -100,16 +100,30 @@
 //
 
 // Задача
-const bmi = calcBMI("88,3", "74.9");
-console.log("🚀 ~ bmi:", bmi);
+// console.log("🚀 ~ bmi:", calcBMI("88,3", "74.9"));
 
-function calcBMI(weight, height) {
-  let normlizeweight = weight.replace(",", ".");
-  let normlizeheight = height.replace(",", ".");
+// function calcBMI(weight, height) {
+//   let normlizeweight = weight.replace(",", ".");
+//   let normlizeheight = height.replace(",", ".");
 
-  console.log(Number.parseFloat(normlizeheight));
-  console.log(Number.parseFloat(normlizeweight));
-  const bmi = normlizeweight / normlizeheight;
-  //   return Math.round((bmi * 10) / 10);
-  return +bmi.toFixed(1);
+//   console.log(Number.parseFloat(normlizeheight));
+//   console.log(Number.parseFloat(normlizeweight));
+//   const bmi = normlizeweight / normlizeheight;
+//   //   return Math.round((bmi * 10) / 10);
+//   return +bmi.toFixed(1);
+// }
+
+function add(a, b, c) {
+  console.log(`Addition result equals ${a + b + c}`);
 }
+
+add(15, 27, 10);
+add(10, 20, 30);
+add(5, 10, 15);
+
+function multyFi(x, y, z) {
+  const resasult = x * y * z;
+  return resasult;
+}
+
+multyFi(2, 2, 3);
