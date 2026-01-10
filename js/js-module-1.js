@@ -113,17 +113,109 @@
 //   return +bmi.toFixed(1);
 // }
 
-function add(a, b, c) {
-  console.log(`Addition result equals ${a + b + c}`);
-}
+// function add(a, b, c) {
+//   console.log(`Addition result equals ${a + b + c}`);
+// }
 
-add(15, 27, 10);
-add(10, 20, 30);
-add(5, 10, 15);
+// add(15, 27, 10);
+// add(10, 20, 30);
+// add(5, 10, 15);
 
-function multyFi(x, y, z) {
-  const resasult = x * y * z;
-  return resasult;
-}
+// function multyFi(x, y, z) {
+//   const resasult = x * y * z;
+//   return resasult;
+// }
 
-multyFi(2, 2, 3);
+// multyFi(2, 2, 3);
+
+// const grade = 85;
+
+// if (grade >= 70) {
+//   console.log("Satisfactory");
+// } else {
+//   console.log("Unsatisfactory");
+// }
+
+// function checkGrade(grade) {
+//   if (grade >= 70) {
+//     return "Satisfactory";
+//   } else {
+//     return "Unsatisfactory";
+//   }
+// }
+
+// console.log(checkGrade(40)); // Unsatisfactory
+// console.log(checkGrade(75)); // Satisfactory
+
+// function checkStorage(available, ordered) {
+//   if (ordered > available) {
+//     return console.log("Not enough goods in stock!");
+//   } else {
+//     return console.log("Order is processed, our manager will contact you");
+//   }
+// }
+
+// checkStorage(150, 30);
+// checkStorage(50, 100);
+// checkStorage(200, 20);
+
+// const grade = "90baal";
+// let numbergrade = Number.parseFloat(grade);
+
+// if (numbergrade >= 90) {
+//   console.log("Perfectly");
+// } else if (grade >= 80) {
+//   console.log("Good");
+// } else if (grade >= 70) {
+//   console.log("Satisfactorily");
+// } else {
+//   console.log("Unsatisfactorily");
+// }
+
+// function checkStorage(available, ordered) {
+//   if (ordered === 0) {
+//     return console.log("There are no products in the order!");
+//   } else if (ordered > available) {
+//     return console.log(
+//       "Your order is too large, there are not enough items in stock!"
+//     );
+//   } else {
+//     return console.log("The order is accepted, our manager will contact you");
+//   }
+// }
+
+// checkStorage(100, 50);
+// checkStorage(100, 130);
+// checkStorage(70, 0);
+// checkStorage(200, 20);
+// checkStorage(200, 250);
+// checkStorage(150, 0);
+
+// function getBiggerNumber(a, b) {
+//   return a > b ? a : b;
+// }
+
+// console.log(getBiggerNumber(10, 5));
+// console.log(getBiggerNumber(10, 50));
+// console.log(getBiggerNumber(100, 45));
+
+//Функція checkPassword(password) порівнює переданий їй пароль (параметр password)
+// зі збереженим паролем адміністратора (correctPassword) і повертає рядок з повідомленням
+//  про результат.
+
+// Використовуючи тернарний оператор, доповни функцію таким чином, щоб:
+
+// Якщо значення password і correctPassword збігаються, функція повертала рядок "Access granted"
+// В іншому випадку, функція повертала рядок "Access denied, wrong password!"
+
+// function checkPassword(password) {
+//   const correctPassword = "jqueryismyjam";
+
+//   return password === correctPassword
+//     ? "Access granted"
+//     : "Access denied, wrong password!";
+// }
+
+// console.log(checkPassword("jqueryismyjam"));
+// console.log(checkPassword("angul4r1sl1f3"));
+// console.log(checkPassword("r3actsux"));
