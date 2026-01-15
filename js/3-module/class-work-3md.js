@@ -96,13 +96,14 @@ const hasCSS = courses.includes("CSS");
 // console.log("🚀 ~ hasCSS:", hasCSS);
 // console.log(courses);
 
-//#task 1
+//!!#task 1 ДЗ!!!
 
 function slugify(title) {
   const toLowerCase = title.toLowerCase();
 
-  //   const slugify = toLowerCase.join(" ");
-  //   return slugify;
+  // const slugify = toLowerCase.join(" ");
+  // console.log("🚀 ~ slugify ~ slugify:", slugify);
+  // return slugify;
 }
 
 // console.log(slugify("Arrays for beginners")); // "arrays-for-beginners"
@@ -142,18 +143,18 @@ const friends = ["mango", "kiwi", "poly", "ajax"];
 
 const values = "8 11";
 const sides = values.split(" ");
-console.log("🚀 ~ sides:", sides);
+// console.log("🚀 ~ sides:", sides);
 // ЧЕРЕЗ for of
 // for (const side of sides) {
 //   console.log("🚀 ~ side:", +side);
 // }
 // ЧЕРЕЗ for
-for (let i = 0; i < sides.length; i++) {
-  const side = +sides[i];
-  console.log("🚀 ~ side:", side);
-  sides[i] = side;
-}
-console.log("🚀 ~ sides:", sides);
+// for (let i = 0; i < sides.length; i++) {
+//   const side = +sides[i];
+//   console.log("🚀 ~ side:", side);
+//   sides[i] = side;
+// }
+// console.log("🚀 ~ sides:", sides);
 
-const square = sides[0] * sides[1];
-console.log("🚀 ~ square:", `Площа  дорівнює ${square}`);
+// const square = sides[0] * sides[1];
+// console.log("🚀 ~ square:", `Площа  дорівнює ${square}`);
