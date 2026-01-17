@@ -1,8 +1,8 @@
-const planets = ["Earth", "Mars", "Venus"];
+// const planets = ["Earth", "Mars", "Venus"];
 
-for (let i = 0; i < planets.length; i += 1) {
-  //   console.log(planets[i]);
-}
+// for (let i = 0; i < planets.length; i += 1) {
+//   //   console.log(planets[i]);
+// }
 
 // function calculateTotalPrice(order) {
 //   let totalPrice = "";
@@ -11,17 +11,17 @@ for (let i = 0; i < planets.length; i += 1) {
 //   }
 //   return totalPrice;
 // }
-calculateTotalPrice([12, 85, 37, 4]);
+// calculateTotalPrice([12, 85, 37, 4]);
 
-function calculateTotalPrice(order) {
-  let sum = 0;
-  for (let i = 0; i < order.length; i += 1) {
-    sum += order[i];
-  }
-  return sum;
-}
-const res1 = calculateTotalPrice([12, 85, 37, 4]);
-// console.log("🚀 ~ res1:", res1);
+// function calculateTotalPrice(order) {
+//   let sum = 0;
+//   for (let i = 0; i < order.length; i += 1) {
+//     sum += order[i];
+//   }
+//   return sum;
+// }
+// const res1 = calculateTotalPrice([12, 85, 37, 4]);
+// // console.log("🚀 ~ res1:", res1);
 
 function getEvenNumbers(start, end) {
   let result = [];
@@ -79,4 +79,23 @@ function getCommonElements(array1, array2) {
 }
 
 const res4 = getCommonElements([1, 2, 3], [10, 2, 30]);
-console.log("🚀 ~ res4:", res4);
+// console.log("🚀 ~ res4:", res4);
+
+const planets = ["Earth", "Mars", "Venus"];
+
+for (const planet of planets) {
+  //   console.log(planet);
+}
+
+function calculateTotalPrice(order) {
+  let totalPrice = 0;
+  for (const item of order) {
+    totalPrice += item;
+  }
+  return totalPrice;
+}
+
+const res5 = calculateTotalPrice([12, 85, 37, 4]);
+console.log("🚀 ~ res5:", res5);
+const res6 = calculateTotalPrice([164, 48, 291]);
+console.log(res6);
