@@ -26,12 +26,12 @@ let aprOwner = apartment["owner"];
 // console.log("🚀 ~ aprOwner:", aprOwner);
 // console.log("🚀 ~ apartment:", apartment.descr);
 
-console.log("🚀 ~ apartment.tags BEFORE:", apartment.tags);
-console.log("🚀 ~ aprTags BEFORE:", aprTags);
+// console.log("🚀 ~ apartment.tags BEFORE:", apartment.tags);
+// console.log("🚀 ~ aprTags BEFORE:", aprTags);
 // apartment.tags = ["premium", "promoted", "top", "free"];
 apartment.tags.push("free");
-console.log("🚀 ~ apartment.tags AFTER:", apartment.tags);
-console.log("🚀 ~ aprTags AFTER:", aprTags);
+// console.log("🚀 ~ apartment.tags AFTER:", apartment.tags);
+// console.log("🚀 ~ aprTags AFTER:", aprTags);
 
 // console.log("🚀 ~ apartme÷nt.owner BEFORE:", apartment.owner);
 // console.log("🚀 ~ aprOwn÷er BEFORE:", aprOwner);
@@ -76,3 +76,56 @@ const credentials = {
   [passwordInputName]: "jqueryismyjam",
 };
 // console.log("🚀 ~ credentials:", credentials);
+
+//!! Обява операцій!!
+const Transaction = {
+  DEPOSIT: "deposit",
+  WITHDRAW: "withdrow",
+};
+
+const account = {
+  balance: 0,
+  transaction: [],
+  createTransaction(amount, type) {
+    return { id: this.transaction.length + 1, amount, type };
+  },
+  //!! Поповнення!!
+  deposit(amount) {
+    const transaction = this.createTransaction(amount, Transaction.DEPOSIT);
+    this.transaction.push(transaction);
+    this.balance += amount;
+    console.log(`Кошти зараховано ${amount}. Ваш баланс: ${this.balance}`);
+  },
+  //!! Списання!!
+  withdrow(amount) {
+    if (this.balance < amount) {
+      console.warn(`Операцiю відхилено. Недостатньо коштів!!! `);
+      return;
+    }
+    const transaction = this.createTransaction(amount, Transaction.WITHDRAW);
+    this.transaction.push(transaction);
+    this.balance -= amount;
+    console.log(`Зняття коштів ${amount}. Ваш баланс: ${this.balance}`);
+  },
+  //!! Показати поточний рахунок!!
+  getBalance() {
+    return `Ваш поточний баланс: ${this.balance}`;
+  },
+  //!! Показати деталі операцій!!
+  getTransactionsDetails(id) {
+    for (const transaction of this.transactions) {
+      if (transaction.id === id) {
+        return transaction;
+      }
+    }
+  },
+};
+
+account.deposit(1000);
+account.deposit(1000);
+account.deposit(1000);
+account.withdrow(300);
+account.withdrow(900);
+// const details = getTransactionsDetails(1);
+const balance = account.getBalance();
+console.log("🚀 ~ balance:", balance);
