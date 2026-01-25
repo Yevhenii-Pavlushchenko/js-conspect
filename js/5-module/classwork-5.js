@@ -29,3 +29,6 @@ const calcTotalPrice = (quantity, pricePerItem) => {
 const res7 = calcTotalPrice(5, 100);
 
 console.log("🚀 ~ res7:", res7);
+
+const numbers = [5, 10, 15, 20, 25];
+const filterNumber = numbers.filter(number > 15);

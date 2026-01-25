@@ -50,7 +50,7 @@ numbers.forEach(function (number, index) {
 function calculateTotalPrice(orderedItems) {
   let totalPrice = 0;
 
-  orderedItems.forEach(function (orderedItem, index) {
+  orderedItems.forEach(function (orderedItem) {
     totalPrice += orderedItem;
   });
 
@@ -61,7 +61,7 @@ const res3 = calculateTotalPrice([12, 85, 37, 4]);
 const res4 = calculateTotalPrice([164, 48, 291]);
 // console.log("🚀 ~ res4:", res4);
 const res5 = calculateTotalPrice([412, 371, 94, 63, 176]);
-// console.log("🚀 ~ res5:", res5);
+console.log("🚀 ~ res5:", res5);
 
 //Task 2
 function filterArray(numbers, value) {
