@@ -1,4 +1,7 @@
 //?! Метод Map()
+// Метод map(callback) використовується для трансформації масиву. Він викликає
+// колбек-функцію для кожного елемента вихідного масиву, а результат її роботи
+// записує в новий масив, який і буде результатом виконання методу.
 
 const planets = ["Earth", "Mars", "Venus", "Jupiter"];
 const planetsInUpperCase = planets.map((planet) => planet.toUpperCase());
