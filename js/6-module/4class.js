@@ -220,13 +220,77 @@ class User6 {
 
 const mango6 = new User6({ email: "mango@mail.com" });
 
-console.log(User6.isEmailTaken("poly@mail.com")); // false
-console.log(User6.isEmailTaken("mango@mail.com")); // true
+// console.log(User6.isEmailTaken("poly@mail.com")); // false
+// console.log(User6.isEmailTaken("mango@mail.com")); // true
 //!Особливість статичних методів 
 // Під час їх виклику ключове слово this посилається на сам клас. 
 // Це означає, що статичний метод може отримати доступ до статичних
 // властивостей класу, але не до властивостей екземпляра. Це логічно, 
 // адже статичні методи викликає сам клас, а не його екземпляри.
+
+//! Конструктор дочірнього класу
+//У конструкторі дочірнього класу необхідно викликати спеціальну 
+// функцію super(args) — це псевдонім конструктора батьківського класу.
+class User7 {
+  #email;
+
+  constructor(email) {
+    this.#email = email;
+  }
+
+  get email() {
+    return this.#email;
+  }
+
+  set email(newEmail) {
+    this.#email = newEmail;
+  }
+}
+
+class ContentEditor extends User7{
+  constructor(params) {
+    // Виклик конструктора батьківського класу User
+    super(params.email); 
+
+    this.posts = params.posts;
+  }
+}
+
+const editor = new ContentEditor({ 
+	email: "mango@mail.com", 
+	posts: [] 
+});
+// console.log(editor); // { #email: "mango@mail.com", posts: [] }
+// console.log(editor.email); // "mango@mail.com"
+
+//! Методи дочірнього класу
+//Дочірній клас може використовувати методи та властивості батьківського 
+// класу. Крім цього, у дочірньому класі можна оголошувати методи, які будуть 
+// доступні тільки його екземплярам.
+
+// Уявімо, що вище є оголошення класу User
+
+class ContentEditor2 extends User {
+  constructor(params) {
+    super(params.email);
+    this.posts = params.posts;
+  }
+
+  addPost(post) {
+    this.posts.push(post);
+  }
+}
+
+const editor2 = new ContentEditor2({ 
+	email: "mango@mail.com", 
+	posts: [] 
+});
+
+console.log(editor2); // { #email: "mango@mail.com", posts: [], addPost: f }
+
+editor2.addPost("post-1");
+editor2.addPost("post-2");
+console.log(editor2); // ['post-1', 'post-2']
 
 
 
