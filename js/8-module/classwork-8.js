@@ -71,3 +71,5 @@ function getRandomHexColor() {
 
   return color;
 }
+ console.log('hello');
+ 
